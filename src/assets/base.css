@@ -1,4 +1,35 @@
-/* color palette from <https://github.com/vuejs/theme> */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  background-color: rgb(32, 32, 32);
+}
+
+/*Thank you kind stack overflow stranger for informing me about margin and padding. This fixed the annoying horizontal nav bar issue on the about me page*/
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /*This may need to be moved later as this is hiding it everywhere but I think that will be fine for this project*/
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

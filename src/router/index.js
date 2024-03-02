@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory  } from 'vue-router'
-import Home from '../views/AboutView.vue'
-import About from '../views/HomeView.vue'
+import Home from '../pages/LandingPage.vue'
+import About from '../pages/AboutPage.vue'
 
 const router = createRouter({
     history: createWebHashHistory('/jcc-website/'),

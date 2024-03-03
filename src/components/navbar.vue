@@ -7,7 +7,7 @@ function openLink(link) {
 
 <template>
     <div>
-        <div class="navbar border-b-2 border-red-400 w-screen">
+        <div class="navbar border-b-2 border-red-400 w-screen sticky top-0">
             <div class="navbar-center mx-auto">
                 <ul class="menu menu-horizontal px-1 text-white">
                     <li><RouterLink to="/" class="hover:text-gray-600">Home</RouterLink></li>

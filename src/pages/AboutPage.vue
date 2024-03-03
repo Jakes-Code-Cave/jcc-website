@@ -1,5 +1,6 @@
 <script setup>
 import navbar from '../components/navbar.vue'
+import team from '../data/team.json'
 </script>
 
 <template>
@@ -12,16 +13,11 @@ import navbar from '../components/navbar.vue'
   </div>
   <div class="w-screen text-white text-center">
     <h2 class="text-3xl font-extrabold text-blue-400 sm:text-4xl pb-10">Our Team</h2>
-    <div class="grid grid-cols-2">
-      <div>
-        <img src="../assets/images/myPFP.png" alt="My Profile Picture" class="h-60 mx-auto rounded-lg" />
-        <h1 class="text-4xl font-bold py-4">Jake2k4</h1>
-        <h2 class="text-1xl">Lead Developer/Founder</h2>
-      </div>
-      <div>
-        <img src="../assets/images/baskinsLogo.png" alt="Baskins Logo" class="h-60 mx-auto rounded-lg" />
-        <h1 class="text-4xl font-bold py-4">Baskins</h1>
-        <h2 class="text-1xl">Support</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+      <div v-for="member in team">
+        <img :src="`/jcc-website/images/${member.img}`" alt="profilePicture" class="h-60 mx-auto rounded-lg pointer-events-none" />
+        <h1 class="text-4xl font-bold py-4">{{ member.name }}</h1>
+        <h2 class="text-1xl">{{ member.role }}</h2>
       </div>
     </div>
     <!--May need to move to a json if we gain more members-->

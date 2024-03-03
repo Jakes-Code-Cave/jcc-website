@@ -43,7 +43,7 @@ import navbar from '../components/navbar.vue'
                     </div>
                 </div>
                 <div>
-                    <img class="-mr-24 rounded-lg md:rounded-l-full h-96 w-full" src="../assets/images/myPFP.png">
+                    <img class="-mr-24 rounded-lg md:rounded-l-full h-96 w-full pointer-events-none" src="../assets/images/myPFP.png">
                 </div>
             </div>
         </div>

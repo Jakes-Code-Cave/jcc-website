@@ -1,5 +1,4 @@
 <script setup>
-import navbar from '../components/navbar.vue'
 import products from '../data/products.json'
 
 function openLink(link) {
@@ -8,7 +7,6 @@ function openLink(link) {
 </script>
 
 <template>
-  <navbar />
   <div class="w-screen text-white px-4">
     <div>
       <div class="pageTitle bg-base-200 text-center my-10">

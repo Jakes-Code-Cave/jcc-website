@@ -1,10 +1,8 @@
 <script setup>
-import navbar from '../components/navbar.vue'
 import team from '../data/team.json'
 </script>
 
 <template>
-  <navbar />
   <div class="w-3/5 mx-auto text-center text-white text-2xl py-28">
     <h2 class="text-3xl font-extrabold text-blue-400 sm:text-4xl pb-4">About Us</h2>
     <body>

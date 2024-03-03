@@ -22,7 +22,7 @@ function openLink(link) {
         <div class="card-body bg-gray-800 rounded">
           <h2 class="card-title bg-gray-800">
           {{ product.name }}!
-          <div v-if="product.newFlag" class="badge badge-secondary bg-gray-800">New</div>
+          <div v-if="product.newFlag" class="badge badge-secondary bg-gray-800 text-white">New</div>
           </h2>
           <p class="bg-gray-800">{{ product.desc }}</p>
           <div class="bg-gray-800 card-actions justify-end">

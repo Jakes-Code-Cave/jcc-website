@@ -11,6 +11,7 @@ import navbar from '../components/navbar.vue'
     </body>
   </div>
   <div class="w-screen text-white text-center">
+    <h2 class="text-3xl font-extrabold text-blue-400 sm:text-4xl pb-10">Our Team</h2>
     <div class="grid grid-cols-2">
       <div>
         <img src="../assets/images/myPFP.png" alt="My Profile Picture" class="h-60 mx-auto rounded-lg" />

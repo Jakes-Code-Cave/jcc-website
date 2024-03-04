@@ -18,12 +18,14 @@ function openLink(link) {
       <div v-for="product in products" class="flex flex-col"> <!--Flex col keeps them same size-->
         <figure><img class="rounded h-60 w-full" :src="product.img" :alt="product.imgAlt" /></figure>
         <div class="card-body bg-gray-800 rounded">
-          <h2 class="card-title bg-gray-800">
-          {{ product.name }}!
-          <div v-if="product.newFlag" class="badge badge-secondary bg-gray-800 text-white">New</div>
-          <div v-for="tag in product.tags" class="bg-gray-800 card-actions justify-end">
-            <div class="bg-gray-800 badge badge-outline">{{ tag }}</div>
-          </div>
+          <h2 class="card-title bg-gray-800 text-center">
+            {{ product.name }}!
+            <br/>
+            {{ product.price }}
+            <div v-if="product.newFlag" class="badge badge-secondary bg-gray-800 text-white">New</div>
+            <div v-for="tag in product.tags" class="bg-gray-800 card-actions justify-end">
+              <div class="bg-gray-800 badge badge-outline">{{ tag }}</div>
+            </div>
           </h2>
           <p class="bg-gray-800">{{ product.desc }}</p>
           <div class="bg-gray-800 card-actions justify-end">

@@ -5,8 +5,9 @@
         "url": "https://jcc-scripts.tebex.io/package/6157054",
         "imgAlt": "JCC-Society",
         "newFlag": "true",
-        "tags": ["Script", "Price: 30 USD"],
-        "roadmap": "true",
+        "price": "Price: 30 USD",
+        "tags": ["Script"],
+        "roadmap": true,
         "roadmapData": [
             {
                 "name": "Society Robberies",

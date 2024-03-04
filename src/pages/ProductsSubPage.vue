@@ -19,19 +19,19 @@ import products from '../data/products.json'
               <li class="step bg-gray-800 text-white">Testing</li>
               <li class="step bg-gray-800 text-white">Published</li>
             </ul>
-            <ul v-if="roadmapGoal.status == 'Development'" class="steps bg-gray-800 py-4 h-22">
+            <ul v-else-if="roadmapGoal.status == 'Development'" class="steps bg-gray-800 py-4 h-22">
               <li class="step step-primary bg-gray-800 text-white">Planned</li>
               <li class="step step-primary bg-gray-800 text-white mr-8 ml-2">Development</li>
               <li class="step bg-gray-800 text-white">Testing</li>
               <li class="step bg-gray-800 text-white">Published</li>
             </ul>
-            <ul v-if="roadmapGoal.status == 'Testing'" class="steps bg-gray-800 py-4 h-22">
+            <ul v-else-if="roadmapGoal.status == 'Testing'" class="steps bg-gray-800 py-4 h-22">
               <li class="step step-primary bg-gray-800 text-white">Planned</li>
               <li class="step step-primary bg-gray-800 text-white mr-8 ml-2">Development</li>
               <li class="step step-primary bg-gray-800 text-white">Testing</li>
               <li class="step bg-gray-800 text-white">Published</li>
             </ul>
-            <ul v-if="roadmapGoal.status == 'Published'" class="steps bg-gray-800 py-4 h-22">
+            <ul v-else-if="roadmapGoal.status == 'Published'" class="steps bg-gray-800 py-4 h-22">
               <li class="step step-primary bg-gray-800 text-white">Planned</li>
               <li class="step step-primary bg-gray-800 text-white mr-8 ml-2">Development</li>
               <li class="step step-primary bg-gray-800 text-white">Testing</li>

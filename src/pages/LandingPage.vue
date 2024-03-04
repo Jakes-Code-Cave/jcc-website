@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <body class="w-screen">
+    <div class="w-screen">
         <div class="text-gray-300 container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
 
             <p class="font-sans text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-    </body>
+    </div>
 </template>
 
 <style scoped>

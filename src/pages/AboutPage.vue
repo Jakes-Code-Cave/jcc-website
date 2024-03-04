@@ -5,9 +5,9 @@ import team from '../data/team.json'
 <template>
   <div class="w-3/5 mx-auto text-center text-white text-2xl py-28">
     <h2 class="text-3xl font-extrabold text-blue-400 sm:text-4xl pb-4">About Us</h2>
-    <body>
+    <div>
       We are a dedicated RedM Script Studio committed to delivering unparalleled immersion, rich features, modularity, and extensive configurability in our scripts. Our mission is to enhance the RedM experience by offering high-quality, affordable solutions to the community. Our scripts are meticulously crafted to empower players' creativity and provide a seamless, enjoyable gaming experience. Join us on our journey to redefine the possibilities of RedM scripting.
-    </body>
+    </div>
   </div>
   <div class="w-screen text-white text-center">
     <h2 class="text-3xl font-extrabold text-blue-400 sm:text-4xl pb-10">Our Team</h2>

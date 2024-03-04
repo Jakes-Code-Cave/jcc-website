@@ -25,7 +25,51 @@
                 "status": "Planned"
             }
         ],
-        "routeToName": "/products/jcc-society",
+        "docs": true,
+        "docsData": [
+            {
+                "title": "Check if player owns a society!",
+                "desc": "You will need to pass the character id so you will have to have vorp core\nWill return the society/societies the player owns or false if they do not own any",
+                "code": "\nlocal _source = source\nlocal Character = VORPcore.getUser(_source).getUsedCharacter\nlocal result = exports['JCC-Society']:checkIfPlayerOwnsSociety(Character.charIdentifier)"
+            },
+            {
+                "title": "Get Society Info!",
+                "desc": "Society Id is the id (business_id in database) Will return the data table, or false if no society is found",
+                "code": "local result = exports['JCC-Society']:getSocietyInfo(societyId)"
+            },
+            {
+                "title": "Get Society Employees",
+                "desc": "Society Id is the id (business_id in database) Will return a table of the employees or false if none found",
+                "code": "local result = exports['JCC-Society']:getSocietyEmployees(societyId)"
+            },
+            {
+                "title": "Open Society Inventory",
+                "desc": "Society Id is the id (business_id in database) sourceToOpenOn is the source of the player to open the inventory too Will open the inventory no return value",
+                "code": "exports['JCC-Society']:openSocietyInventory(societyId, sourceToOpenOn)"
+            },
+            {
+                "title": "Get Society Ledger Amount",
+                "desc": "Society Id is the id (business_id in database) Will return the amount of money in the societies ledger",
+                "code": "local retval = exports['JCC-Society']:getLedgerAmount(societyId)"
+            },
+            {
+                "title": "Get Society Tax Amount",
+                "desc": "Society Id is the id (business_id in database) Returns the amount the society pays in taxes",
+                "code": "local retval = exports['JCC-Society']:getSocietyTaxAmount(societyid)"
+            },
+            {
+                "title": "Add money to ledger",
+                "desc": "Society Id is the id (business_id in database) Amount is the amount to add Will return true if it succeeded false if failed",
+                "code": "local retval = exports['JCC-Society']:addMoneyToLedger(societyId, amount)"
+            },
+            {
+                "title": "Remove Money From Ledger",
+                "desc": "Society Id is the id (business_id in database) Amount is the amount to remove Will return true if it succeeded false if failed",
+                "code": "local retval = exports['JCC-Society']:removeMoneyFromLedger(societyId, amount)"
+            }
+        ],
+        "roadmapRouteToName": "/products/roadmap/jcc-society",
+        "docsRouteToName": "/products/docs/jcc-society",
         "img": "https://techraptor.net/sites/default/files/styles/image_header/public/2020-03/Red%20Dead%20Redemption%202%20RedM%20Multiplayer%20Mod%20cover.jpg?itok=YyGqo6ky"
     }
 }

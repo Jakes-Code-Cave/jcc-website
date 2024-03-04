@@ -2,7 +2,8 @@ import { createRouter, createWebHashHistory  } from 'vue-router'
 import Home from '../pages/LandingPage.vue'
 import About from '../pages/AboutPage.vue'
 import Products from '../pages/ProductsPage.vue'
-import ProductSubPage from '../pages/ProductsSubPage.vue'
+import ProductRoadmap from '../pages/productssubpages/ProductsRoadmap.vue'
+import ProductDocs from '../pages/productssubpages/ProductsDocs.vue'
 
 
 const router = createRouter({
@@ -11,7 +12,8 @@ const router = createRouter({
         { path: '/', name: "Home", component: Home },
         { path: '/about', name: "About", component: About },
         { path: '/products', name: "Products", component: Products },
-        { path: '/products/:id', name: "ProductPage", component: ProductSubPage }
+        { path: '/products/roadmap/:id', name: "Product Roadmap", component: ProductRoadmap },
+        { path: '/products/docs/:id', name: "Product Docs", component: ProductDocs }
     ]
 })
 

@@ -3,12 +3,12 @@ import products from '../../data/products.json'
 </script>
 
 <template>
-    <div class="container w-screen text-white">
+    <div class="container w-screen text-white mx-auto">
         <p class="mx-auto text-center text-4xl font-bold py-10">
             {{ products[$route.params.id].name }} Documentation
         </p>
         <div class="grid grid-cols-1 w-2/4 mx-auto py-2 gap-24 my-10">
-            <div v-for="doc in products[$route.params.id].docsData" :key="doc.id" class="">
+            <div v-for="doc in products[$route.params.id].docsData" :key="doc.id" class="mx-auto">
                 <h1 class="font-bold text-2xl text-center px-2 pb-2">
                     {{ doc.title }}
                 </h1>

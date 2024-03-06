@@ -23,6 +23,21 @@
                 "name": "Buy Supplies",
                 "desc": "Add the ability to buy supplies for your society!",
                 "status": "Planned"
+            },
+            {
+                "name": "Job System",
+                "desc": "Add a job system to societies that allows societies to have a set job, and multijob menu for players so they can switch between jobs!",
+                "status": "Planned"
+            },
+            {
+                "name": "Option For Jobs To Make Societies",
+                "desc": "Add an option for jobs to make societies, so players with the job can make socities!",
+                "status": "Planned"
+            },
+            {
+                "name": "Transferable Ownership",
+                "desc": "Option so society owners can transfer ownership to one of thier employees or players! To allow for players to sell or pass down societies!",
+                "status": "Planned"
             }
         ],
         "docs": true,

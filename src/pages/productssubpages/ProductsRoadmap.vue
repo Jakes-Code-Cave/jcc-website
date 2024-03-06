@@ -7,8 +7,8 @@ import products from '../../data/products.json'
     {{ products[$route.params.id].name }} Roadmap
   </p>
   <div class="grid grid-cols-1 lg:grid-cols-3 py-10 gap-20 my-10 mx-8">
-    <div v-for="roadmapGoal in products[$route.params.id].roadmapData" class="flex flex-col items-center">
-      <div class="card w-96 shadow-xl rounded border-solid border-2 border-red-700">
+    <div v-for="roadmapGoal in products[$route.params.id].roadmapData" class="flex flex-col h-full items-center"> <!--h-full makes all elements the same height as the tallest element so they are all even-->
+      <div class="card w-96 shadow-xl rounded border-solid border-2 border-red-700 flex-1">
         <div class="card-body bg-gray-800 rounded">
           <h2 class="card-title bg-gray-800 text-white">{{ roadmapGoal.name }}</h2>
           <p class="bg-gray-800 text-white">{{ roadmapGoal.desc }}</p>

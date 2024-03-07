@@ -4,6 +4,7 @@ import products from '../../data/products.json'
 function copyText(text) {
   navigator.clipboard.writeText(text);
 }
+
 </script>
 
 <template>

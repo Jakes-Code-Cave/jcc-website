@@ -2,7 +2,7 @@
 import products from '../../data/products.json'
 
 function copyText(text) {
-  navigator.clipboard.writeText(text.value);
+  navigator.clipboard.writeText(text);
 }
 </script>
 

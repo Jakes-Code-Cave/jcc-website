@@ -4,8 +4,10 @@
         "desc": "Customize and manage your society effortlessly with simple configuration and seamless translations. Enjoy a highly modular experience, with features like an admin management menu, developer exports, webhooks, and built-in safety measures. Access a range of tools, including society inventories, upgradeable inventories, named societies, a togglable blip, ledger system, employee management, rank system, payment system, billing command, and tax implementation.",
         "url": "https://jcc-scripts.tebex.io/package/6157054",
         "imgAlt": "JCC-Society",
-        "newFlag": "true",
+        "newFlag": true,
         "price": "Price: 30 USD",
+        "video": "https://www.youtube.com/watch?v=TARUOl4slaM&ab_channel=JCCScripts",
+        "freeTrial": "https://jcc-scripts.tebex.io/package/6162417",
         "tags": ["Script"],
         "roadmap": true,
         "roadmapData": [

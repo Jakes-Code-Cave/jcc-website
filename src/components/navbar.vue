@@ -6,8 +6,8 @@ function openLink(link) {
 </script>
 
 <template>
-    <div>
-        <div class="navbar border-b-2 border-red-400 w-screen sticky top-0">
+    <div class="w-screen">
+        <div class="navbar border-b-2 border-red-400 sticky top-0">
             <div class="navbar-center mx-auto">
                 <ul class="menu menu-horizontal px-1 text-white">
                     <li><RouterLink to="/" class="hover:text-gray-600">Home</RouterLink></li>
@@ -17,7 +17,7 @@ function openLink(link) {
                         <details>
                             <summary>Links</summary>
                             <ul class="p-2">
-                                <li><a @click="openLink('https://www.youtube.com/@Jake2k4-id9ym')">Youtube</a></li>
+                                <li><a @click="openLink('https://www.youtube.com/channel/UCyJ-zyMi6GNm9Bo83dGfeNA')">Youtube</a></li>
                                 <li><a @click="openLink('https://github.com/Jakes-Code-Cave')">Github</a></li>
                                 <li><a @click="openLink('https://discord.gg/SW2rBydUuu')">Discord</a></li>
                                 <li><a @click="openLink('mailto:jakelandrumbe@gmail.com')">Email</a></li>

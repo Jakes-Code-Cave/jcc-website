@@ -28,11 +28,10 @@ function openLink(link) {
             </div>
           </h2>
           <p class="bg-gray-800">{{ product.desc }}</p>
-          <div class="bg-gray-800 card-actions justify-end grid grid-cols-1 lg:grid-cols-3">
+          <div class="bg-gray-800 card-actions justify-end grid grid-cols-1 lg:grid-cols-4">
             <RouterLink v-if="product.roadmap" :to="product.roadmapRouteToName" class="btn btn-sm hover:cursor-pointer hover:opacity-80 rounded-md bg-gray-500 border-gray-500 text-white">Roadmap</RouterLink>
             <RouterLink v-if="product.docs" :to="product.docsRouteToName" class="btn btn-sm hover:cursor-pointer hover:opacity-80 rounded-md bg-gray-500 border-gray-500 text-white">Documentation</RouterLink>
             <button v-if="product.video" class="btn btn-sm bg-gray-500 border-gray-500 rounded-md text-white hover:cursor-pointer hover:opacity-80" @click="openLink(product.video)">Video Preview</button>
-            <button v-if="product.freeTrial" class="btn btn-sm bg-gray-500 border-gray-500 rounded-md text-white hover:cursor-pointer hover:opacity-80" @click="openLink(product.freeTrial)">Free Trial</button>
             <button class="btn btn-sm bg-gray-500 border-gray-500 rounded-md text-white hover:cursor-pointer hover:opacity-80" @click="openLink(product.url)">Purchase</button>
           </div>
         </div>

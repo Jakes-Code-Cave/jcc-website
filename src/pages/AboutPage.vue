@@ -18,8 +18,6 @@ import team from '../data/team.json'
         <h2 class="text-1xl">{{ member.role }}</h2>
       </div>
     </div>
-    <!--May need to move to a json if we gain more members-->
-    <!--May also move the team to its own team page in future if we gain more-->
   </div>
 </template>
 

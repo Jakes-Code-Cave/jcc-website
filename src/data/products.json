@@ -1,10 +1,53 @@
 {
+    "jcc-stores": {
+        "name": "JCC-Stores",
+        "desc": "Want your players to have a unique shopping experience? JCC-Stores is the perfect solution! This script allows you to create custom stores with ease, offering a range of features like a customizable shop inventory sizes, a unique blip, NPC and Player stores, employee system (Only works if you own JCC-Society), and built-in safety features. Enjoy a seamless experience with a highly modular design.",
+        "url": "https://jcc-scripts.tebex.io/package/6157054",
+        "imgAlt": "JCC-Stores",
+        "newFlag": true,
+        "price": "Price: 20 USD",
+        "video": false,
+        "tags": ["Script"],
+        "roadmap": true,
+        "roadmapData": [
+            {
+                "name": "Jobs can manage stores",
+                "desc": "Add the ability for jobs to manage stores, so players with the job can manage the store!",
+                "status": "Planned"
+            },
+            {
+                "name": "Make blips colorable",
+                "desc": "Allow players to change the color of their society blip!",
+                "status": "Planned"
+            },
+            {
+                "name": "Developer Exports",
+                "desc": "Add developer exports to allow for other scripts to interact with JCC-Stores!",
+                "status": "Planned"
+            },
+            {
+                "name": "Option for jobs to create stores",
+                "desc": "Add an option for jobs to create stores, so players with the job can create stores!",
+                "status": "Planned"
+            },
+            {
+                "name": "Transferable Ownership",
+                "desc": "Option so store owners can transfer ownership to one of thier employees or players! To allow for players to sell or pass down stores!",
+                "status": "Planned"
+            }
+        ],
+        "docs": false,
+        "docsData": [],
+        "roadmapRouteToName": "/products/roadmap/jcc-society",
+        "docsRouteToName": "/products/docs/jcc-society",
+        "img": "https://static.wikia.nocookie.net/reddeadredemption/images/f/f2/RDRValentinegstore.jpg/revision/latest/scale-to-width-down/1200?cb=20200410234412"
+    },
     "jcc-society": {
         "name": "JCC-Society",
         "desc": "Customize and manage your society effortlessly with simple configuration and seamless translations. Enjoy a highly modular experience, with features like an admin management menu, developer exports, webhooks, and built-in safety measures. Access a range of tools, including society inventories, upgradeable inventories, named societies, a togglable blip, ledger system, employee management, rank system, payment system, billing command, and tax implementation.",
         "url": "https://jcc-scripts.tebex.io/package/6157054",
         "imgAlt": "JCC-Society",
-        "newFlag": true,
+        "newFlag": false,
         "price": "Price: 30 USD",
         "video": "https://www.youtube.com/watch?v=TARUOl4slaM&ab_channel=JCCScripts",
         "tags": ["Script"],
@@ -44,44 +87,79 @@
         "docs": true,
         "docsData": [
             {
-                "title": "Check if player owns a society!",
-                "desc": "You will need to pass the character id so you will have to have vorp core\nWill return the society/societies the player owns or false if they do not own any",
-                "code": "\nlocal _source = source\nlocal Character = VORPcore.getUser(_source).getUsedCharacter\nlocal result = exports['JCC-Society']:checkIfPlayerOwnsSociety(Character.charIdentifier)"
+                "title": "Import API",
+                "desc": "Import the API into your script to use the API! This must be done in the server before you can use the API!",
+                "code": "JCCSociety = exports['JCC-Society'].getSocietyAPI()"
             },
             {
-                "title": "Get Society Info!",
-                "desc": "Society Id is the id (business_id in database) Will return the data table, or false if no society is found",
-                "code": "local result = exports['JCC-Society']:getSocietyInfo(societyId)"
+                "title": "Get Society",
+                "desc": "societyId is the id (business_id in database) Will return the society object or false if no society is found. This will allow you to access the society functions/class!",
+                "code": "local society = JCCSociety:GetSociety(societyId)"
             },
             {
                 "title": "Get Society Employees",
-                "desc": "Society Id is the id (business_id in database) Will return a table of the employees or false if none found",
-                "code": "local result = exports['JCC-Society']:getSocietyEmployees(societyId)"
+                "desc": "societyId is the id (business_id in database) Will return a table of the employees or false if none found",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal employees = society:GetSocietyEmployees()"
+            },
+            {
+                "title": "Get Society Info",
+                "desc": "societyId is the id (business_id in database) Will return the societies data, or false if no society is found",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal societyInfo = society:GetSocietyInfo()"
+            },
+            {
+                "title": "Check Rank Permissions",
+                "desc": "societyId is the id (business_id in database) rankName is the rank you want to check permissions, will return the ranks permissions, false if not found",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal rankPerms = society:CheckRankPermissions(rankName)"
+            },
+            {
+                "title": "Check If Character Is An Emlpoyee",
+                "desc": "societyId is the id (business_id in database) charId is the character id you want to check, will return true if they are an employee, false if not",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal isEmployee = society:CheckIfCharacterIsEmployee(charId)"
+            },
+            {
+                "title": "Get Employee Rank",
+                "desc": "societyId is the id (business_id in database) charId is the character id you want to check, will return the employees rank, false if not found",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal rank = society:GetEmployeeRank(charId)"
             },
             {
                 "title": "Open Society Inventory",
-                "desc": "Society Id is the id (business_id in database) sourceToOpenOn is the source of the player to open the inventory too Will open the inventory no return value",
-                "code": "exports['JCC-Society']:openSocietyInventory(societyId, sourceToOpenOn)"
+                "desc": "societyId is the id (business_id in database) sourceToOpenOn is the source of the player to open the inventory too, will open the inventory, or return false if failed",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal success = society:OpenSocietyInventory(sourceToOpenOn)"
             },
             {
-                "title": "Get Society Ledger Amount",
-                "desc": "Society Id is the id (business_id in database) Will return the amount of money in the societies ledger",
-                "code": "local retval = exports['JCC-Society']:getLedgerAmount(societyId)"
+                "title": "Get Ledger Amount",
+                "desc": "societyId is the id (business_id in database) will return the amount of money in the societies ledger",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal ledgerAmount = society:GetLedgerAmount()"
             },
             {
                 "title": "Get Society Tax Amount",
-                "desc": "Society Id is the id (business_id in database) Returns the amount the society pays in taxes",
-                "code": "local retval = exports['JCC-Society']:getSocietyTaxAmount(societyid)"
+                "desc": "societyId is the id (business_id in database) will return the amount the society pays in taxes",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal taxAmount = society:GetSocietyTaxAmount()"
             },
             {
-                "title": "Add money to ledger",
-                "desc": "Society Id is the id (business_id in database) Amount is the amount to add Will return true if it succeeded false if failed",
-                "code": "local retval = exports['JCC-Society']:addMoneyToLedger(societyId, amount)"
+                "title": "Add Money To Ledger",
+                "desc": "societyId is the id (business_id in database) amount is the amount to add, will return true if it succeeded, false if failed",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal success = society:AddMoneyToLedger(amount)"
             },
             {
                 "title": "Remove Money From Ledger",
-                "desc": "Society Id is the id (business_id in database) Amount is the amount to remove Will return true if it succeeded false if failed",
-                "code": "local retval = exports['JCC-Society']:removeMoneyFromLedger(societyId, amount)"
+                "desc": "societyId is the id (business_id in database) amount is the amount to remove, will return true if it succeeded, false if failed",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal success = society:RemoveMoneyFromLedger(amount)"
+            },
+            {
+                "title": "Get All Societies Character Owns",
+                "desc": "charId is the character id you want to check, will return a table of the societies the character owns, or false if none found",
+                "code": "local societies = JCCSociety.MiscAPI:GetAllSocietiesCharOwns(charId)"
+            },
+            {
+                "title": "Get All Societies Character Is Employed At",
+                "desc": "charId is the character id you want to check, will return a table of the societies the character is employed at, or false if none found",
+                "code": "local societies = JCCSociety.MiscAPI:GetAllSocietiesCharIsEmployedAt(charId)"
+            },
+            {
+                "title": "Get All Societies",
+                "desc": "Will return a table of all the societies, or false if none found",
+                "code": "local societies = JCCSociety.MiscAPI:GetAllSocieties()"
             }
         ],
         "roadmapRouteToName": "/products/roadmap/jcc-society",

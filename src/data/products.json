@@ -11,6 +11,11 @@
         "roadmap": true,
         "roadmapData": [
             {
+                "name": "Admin Management Menu",
+                "desc": "Add an admin management menu to allow for easy management of stores!",
+                "status": "Planned"
+            },
+            {
                 "name": "Jobs can manage stores",
                 "desc": "Add the ability for jobs to manage stores, so players with the job can manage the store!",
                 "status": "Planned"

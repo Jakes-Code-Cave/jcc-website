@@ -112,6 +112,31 @@
                 "code": "local society = JCCSociety:GetSociety(societyId)\nlocal societyInfo = society:GetSocietyInfo()"
             },
             {
+                "title": "Get Society Owner Character ID",
+                "desc": "societyId is the id (business_id in database) Will return the owners character id, or false if no society is found",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal ownerCharId = society:GetSocietyOwnerCharacterId()"
+            },
+            {
+                "title": "Get Employee Data",
+                "desc": "societyId is the id (business_id in database) charId is the character id you want to get the data for, will return the employees data, false if not found",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal employeeData = society:GetEmployeeData(charId)"
+            },
+            {
+                "title": "Get All Ranks",
+                "desc": "societyId is the id (business_id in database) Will return a table of all the ranks, or false if none found",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal ranks = society:GetAllRanks()"
+            },
+            {
+                "title": "Get Rank Info",
+                "desc": "societyId is the id (business_id in database) rankName is the rank you want to get the info for, will return the ranks data, false if not found",
+                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal rankInfo = society:GetRankInfo(rankName)"
+            },
+            {
+                "title": "Get All Jobs From Societies Player Owns Or Is Employed At",
+                "desc": "charId is the character id you want to check, will return a table of all the jobs from the societies the character owns or is employed at, or false if none found",
+                "code": "local jobs = JCCSociety.MiscAPI:GetAllSocietyJobsFromSocietiesPlayerEmployedAtOrOwns(charId)\nif jobs then\nfor k, v in pairs(jobs) do\nprint(v.jobName .. ' ' .. v.societyId)\nend\nend"
+            },
+            {
                 "title": "Check Rank Permissions",
                 "desc": "societyId is the id (business_id in database) rankName is the rank you want to check permissions, will return the ranks permissions, false if not found",
                 "code": "local society = JCCSociety:GetSociety(societyId)\nlocal rankPerms = society:CheckRankPermissions(rankName)"

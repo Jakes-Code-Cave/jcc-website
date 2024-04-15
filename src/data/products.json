@@ -66,7 +66,7 @@
             {
                 "name": "Make blips colorable",
                 "desc": "Allow players to change the color of their society blip!",
-                "status": "Planned"
+                "status": "Development"
             },
             {
                 "name": "Buy Supplies",
@@ -76,12 +76,12 @@
             {
                 "name": "Job System",
                 "desc": "Add a job system to societies that allows societies to have a set job, and multijob menu for players so they can switch between jobs!",
-                "status": "Planned"
+                "status": "Published"
             },
             {
                 "name": "Option For Jobs To Make Societies",
                 "desc": "Add an option for jobs to make societies, so players with the job can make socities!",
-                "status": "Planned"
+                "status": "Development"
             },
             {
                 "name": "Transferable Ownership",

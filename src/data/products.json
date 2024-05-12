@@ -189,7 +189,7 @@
             {
                 "title": "Check If a Player Has a certain Job And Is On Duty",
                 "desc": "retval will return true if the player has the job and is on duty, false if they dont have the job or is not on duty",
-                "code": "local retval = JCCSociety.MiscAPI:GetAllSocieties('police', _source)"
+                "code": "local retval = JCCSociety.MiscAPI:CheckIfPlayerHasJobAndIsOnDuty('police', _source)"
             }
         ],
         "roadmapRouteToName": "/products/roadmap/jcc-society",

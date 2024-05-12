@@ -152,11 +152,6 @@
                 "code": "local society = JCCSociety:GetSociety(societyId)\nlocal rank = society:GetEmployeeRank(charId)"
             },
             {
-                "title": "Open Society Inventory",
-                "desc": "societyId is the id (business_id in database) sourceToOpenOn is the source of the player to open the inventory too, will open the inventory, or return false if failed",
-                "code": "local society = JCCSociety:GetSociety(societyId)\nlocal success = society:OpenSocietyInventory(sourceToOpenOn)"
-            },
-            {
                 "title": "Get Ledger Amount",
                 "desc": "societyId is the id (business_id in database) will return the amount of money in the societies ledger",
                 "code": "local society = JCCSociety:GetSociety(societyId)\nlocal ledgerAmount = society:GetLedgerAmount()"
@@ -190,6 +185,11 @@
                 "title": "Get All Societies",
                 "desc": "Will return a table of all the societies, or false if none found",
                 "code": "local societies = JCCSociety.MiscAPI:GetAllSocieties()"
+            },
+            {
+                "title": "Check If a Player Has a certain Job And Is On Duty",
+                "desc": "retval will return true if the player has the job and is on duty, false if they dont have the job or is not on duty",
+                "code": "local retval = JCCSociety.MiscAPI:GetAllSocieties('police', _source)"
             }
         ],
         "roadmapRouteToName": "/products/roadmap/jcc-society",
